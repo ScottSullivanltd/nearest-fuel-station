@@ -1,0 +1,28 @@
+<h1>Closest Station: <%= @station.name %></h1>
+
+<section>
+  <div class="address">
+    <strong><%= @station.address %>,</strong>
+  </div>
+  <div class="fuel_type">
+    <p><strong><%= @station.fuel_type %>,</strong></p>
+  </div>
+  <div class="access_times">
+    <p><strong><%= @station.access_times %>,</strong></p>
+  </div>
+</section>
+<section>
+  <div class="distance">
+    <p><strong><%= @station.distance %> miles</strong></p>
+  </div>
+  <div class="travel_time">
+    <p><strong><%= @station.travel_time %></strong></p>
+  </div>
+  <div class="directions">
+    <ul>
+    <% @station.directions.each do |step| %>
+    <li><%= step %></li>
+    <% end %>
+  </ul>
+  </div>
+</section>
